@@ -1,0 +1,698 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="随笔," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="纪念经历了两天晚上的熬夜苦战（25号凌晨三点+ 26号凌晨两点）和各路大神的不吝赐教，终于在今天把想了好久的博客搭建完成。今天白天在图书馆优化了一些细节。终算初具规模。这么具有重要意义的时刻，确实该记上一笔。
+为什么要搭建博客其实从上大学直到现在，都有写日记的习惯。但日记记录的必然都是很私人的东西。自从开始接触前端，自己写代码以来（虽然也只有不到3个月），看了很多技术大牛的博客，获益匪浅。于是萌">
+<meta property="og:type" content="article">
+<meta property="og:title" content="博客终建成">
+<meta property="og:url" content="http://yoursite.com/2017/02/26/MARK/index.html">
+<meta property="og:site_name" content="YAXIN">
+<meta property="og:description" content="纪念经历了两天晚上的熬夜苦战（25号凌晨三点+ 26号凌晨两点）和各路大神的不吝赐教，终于在今天把想了好久的博客搭建完成。今天白天在图书馆优化了一些细节。终算初具规模。这么具有重要意义的时刻，确实该记上一笔。
+为什么要搭建博客其实从上大学直到现在，都有写日记的习惯。但日记记录的必然都是很私人的东西。自从开始接触前端，自己写代码以来（虽然也只有不到3个月），看了很多技术大牛的博客，获益匪浅。于是萌">
+<meta property="og:image" content="http://yoursite.com/2017/02/26/MARK/logo.jpg">
+<meta property="og:updated_time" content="2017-02-26T11:06:03.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="博客终建成">
+<meta name="twitter:description" content="纪念经历了两天晚上的熬夜苦战（25号凌晨三点+ 26号凌晨两点）和各路大神的不吝赐教，终于在今天把想了好久的博客搭建完成。今天白天在图书馆优化了一些细节。终算初具规模。这么具有重要意义的时刻，确实该记上一笔。
+为什么要搭建博客其实从上大学直到现在，都有写日记的习惯。但日记记录的必然都是很私人的东西。自从开始接触前端，自己写代码以来（虽然也只有不到3个月），看了很多技术大牛的博客，获益匪浅。于是萌">
+<meta name="twitter:image" content="http://yoursite.com/2017/02/26/MARK/logo.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/02/26/MARK/"/>
+
+
+
+
+
+  <title> 博客终建成 | YAXIN </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">YAXIN</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/26/MARK/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="YAXIN LI">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YAXIN">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                博客终建成
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-26T16:16:32+08:00">
+                2017-02-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/02/26/MARK/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/26/MARK/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+          
+          <span>&nbsp; | &nbsp;
+          <span id="busuanzi_value_page_pv" ></span>次阅读
+          </span>
+          
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="/2017/02/26/MARK/logo.jpg" alt="logo"></p>
+<h1 id="纪念"><a href="#纪念" class="headerlink" title="纪念"></a>纪念</h1><p>经历了两天晚上的熬夜苦战（25号凌晨三点+ 26号凌晨两点）和各路大神的不吝赐教，终于在今天把想了好久的博客搭建完成。今天白天在图书馆优化了一些细节。终算初具规模。这么具有重要意义的时刻，确实该记上一笔。</p>
+<h1 id="为什么要搭建博客"><a href="#为什么要搭建博客" class="headerlink" title="为什么要搭建博客"></a>为什么要搭建博客</h1><p>其实从上大学直到现在，都有写日记的习惯。但日记记录的必然都是很私人的东西。自从开始接触前端，自己写代码以来（虽然也只有不到3个月），看了很多技术大牛的博客，获益匪浅。于是萌生了为何不搭一个自己的博客的想法。一来分享一个小白是如何从0到1，再从1到正无穷的心路历程。二来，等到自己对技术有所见解之后，也可以通过自己的平台分享给需要的人。还有就是想把自己经历的难忘的瞬间，用这种方式记录下来。有了自己亲手搭建的博客，应该会鞭策自己多进行高质量的文字输出吧。深知什么事情都贵在坚持，在这个知识碎片化的时代，平时接触到的东西，很需要去总结和思考，如果只是一个接受知识的人，很难形成自己独立思考的习惯，很多能力虽然看天赋，但也是需要自己努力去培养的，只希望自己坚持，而不是三分钟热度（虽然在不少事情上我确实是三分钟热度……），但是喜欢就可以很好的坚持。乐此不疲这个词，形容此次搭建过程再合适不过了。</p>
+<h1 id="GitHub-Hexo搭建博客过程中踩的坑"><a href="#GitHub-Hexo搭建博客过程中踩的坑" class="headerlink" title="GitHub+Hexo搭建博客过程中踩的坑"></a>GitHub+Hexo搭建博客过程中踩的坑</h1><h2 id="不知道cd是什么命令"><a href="#不知道cd是什么命令" class="headerlink" title="不知道cd是什么命令"></a>不知道cd是什么命令</h2><p>我是真小白，不知道像我这样连Mac 终端里面cd命令都不知道是啥的人还多不多看。。。于是看到教程上知道，cd到自己的blog文件这句话就先不懂了。为了避免有人和我犯一样的错误，我在这里解释一下cd命令。</p>
+<p>cd命令 是Linux的常用命令之一。命令功能是切换到当前目录。如cd blog即表示切换到名为blog的文件夹下。</p>
+<p>因为很多操作不是在根目录下操作的，需要在自己建的博客文件下下操作，所以cd到自己的博客文件夹这一步，因为当时一直在根目录下操作，导致hexo s命令一直不成功。</p>
+<p>于是，简单的四个命令可以预览博客效果啦~</p>
+<p>$ cd blog</p>
+<p>$ hexo init blog</p>
+<p>$ npm install</p>
+<p>$ hexo s</p>
+<p>### </p>
+<h2 id="本地localhost-4000可以打开，用yaxinview-github-io却该页无法显示"><a href="#本地localhost-4000可以打开，用yaxinview-github-io却该页无法显示" class="headerlink" title="本地localhost:4000可以打开，用yaxinview.github.io却该页无法显示"></a>本地localhost:4000可以打开，用yaxinview.github.io却该页无法显示</h2><p>我因为没有将自己这里github.io前面的 yaxinview一定要和你GitHub的用户名相同，而且尽量不要用大写。因为我一开始GitHub的用户名首字母是大写，而且没有和yaxinview一致，于是更换了GitHub的用户名为yaxinview，成功打开链接 yaxinview.github.io。 嗨森。</p>
+<h2 id="域名解析一直不成功"><a href="#域名解析一直不成功" class="headerlink" title="域名解析一直不成功"></a>域名解析一直不成功</h2><p>作为一个有自己域名的人，怎么能忍受只能通过yaxinview.hithub.io访问，不能通过我自己申请的域名访问呢？域名如何解析的步骤在网上现有的教程上也很多了，但是我一步步走就是总显示不成功。经过大神指点和我的多次尝试，才知道。教程上让把本地的CNAME记录放到 themes/../source下面。但是实践发现，要放到yaxinview/source下才能正常访问。难道是前面放的太深了？哈哈哈。最后可以通过自己域名访问的那一刻，简直要激动的跳起来啦~但是念在大晚上邻居们的感受，我还是低调点儿……</p>
+<h1 id="第一篇博文发布"><a href="#第一篇博文发布" class="headerlink" title="第一篇博文发布"></a>第一篇博文发布</h1><p>可能你会疑问，咦，第一篇文章不是Hello World嘛~~~确实，每个程序员接触变成，不管是什么语言，第一个测试的一定是 Hello World。为了表达对程序猿的尊重，我决定留下这篇自动发表的Hello World. Hello, programming world. I’m coming. </p>
+<p>不知为什么此时此刻想起了海子的这首诗：</p>
+<p>从明天起，做一个幸福的人<br>喂马，劈柴，周游世界<br>从明天起，关心粮食和蔬菜<br>我有一所房子，面朝大海，春暖花开 </p>
+<p>从明天起，和每一个亲人通信<br>告诉他们我的幸福<br>那幸福的闪电告诉我的<br>我将告诉每一个人<br>给每一条河每一座山取一个温暖的名字 </p>
+<p>陌生人，我也为你祝福<br>愿你有一个灿烂的前程<br>愿你有情人终成眷属<br>愿你在尘世获得幸福<br>我只愿面朝大海，春暖花开 </p>
+<p>从明天起，认真写代码……</p>
+<p>最后，谢谢事无巨细帮我答疑解惑的大神们和神奇的互联网。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/随笔/" rel="tag"># 随笔</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/02/25/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/02/26/MARK/"
+           data-title="博客终建成" data-url="http://yoursite.com/2017/02/26/MARK/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="YAXIN LI" />
+          <p class="site-author-name" itemprop="name">YAXIN LI</p>
+           
+              <p class="site-description motion-element" itemprop="description">不为无益之事，何以遣有涯之生？</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#纪念"><span class="nav-number">1.</span> <span class="nav-text">纪念</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#为什么要搭建博客"><span class="nav-number">2.</span> <span class="nav-text">为什么要搭建博客</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#GitHub-Hexo搭建博客过程中踩的坑"><span class="nav-number">3.</span> <span class="nav-text">GitHub+Hexo搭建博客过程中踩的坑</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#不知道cd是什么命令"><span class="nav-number">3.1.</span> <span class="nav-text">不知道cd是什么命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本地localhost-4000可以打开，用yaxinview-github-io却该页无法显示"><span class="nav-number">3.2.</span> <span class="nav-text">本地localhost:4000可以打开，用yaxinview.github.io却该页无法显示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#域名解析一直不成功"><span class="nav-number">3.3.</span> <span class="nav-text">域名解析一直不成功</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第一篇博文发布"><span class="nav-number">4.</span> <span class="nav-text">第一篇博文发布</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-YAXIN"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">YAXIN LI</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"yaxinview"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+</body>
+</html>
