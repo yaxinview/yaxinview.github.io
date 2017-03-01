@@ -1,0 +1,722 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="coding," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="Never too late一直都觉得自己的js基础很弱，好像只会一些HTML+CSS，一直在看大神推荐的js系列书的阶段，觉得得先把基础理清楚，现在总算是真正体会到，纸上得来终觉浅，绝知此事要躬行。今天终于沉下心来，实实在在的写几行代码，独立做了几个练习。如果说现在还写这么基础的东西，也不怕大家笑话，要认清自己究竟几斤几两，慢慢查缺补漏。不正确认识自己，就不会有长足的进步。把自己今天练习过程中遇">
+<meta property="og:type" content="article">
+<meta property="og:title" content="纸上得来终觉浅">
+<meta property="og:url" content="http://yoursite.com/2017/03/01/action/index.html">
+<meta property="og:site_name" content="YAXIN">
+<meta property="og:description" content="Never too late一直都觉得自己的js基础很弱，好像只会一些HTML+CSS，一直在看大神推荐的js系列书的阶段，觉得得先把基础理清楚，现在总算是真正体会到，纸上得来终觉浅，绝知此事要躬行。今天终于沉下心来，实实在在的写几行代码，独立做了几个练习。如果说现在还写这么基础的东西，也不怕大家笑话，要认清自己究竟几斤几两，慢慢查缺补漏。不正确认识自己，就不会有长足的进步。把自己今天练习过程中遇">
+<meta property="og:updated_time" content="2017-03-01T15:48:48.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="纸上得来终觉浅">
+<meta name="twitter:description" content="Never too late一直都觉得自己的js基础很弱，好像只会一些HTML+CSS，一直在看大神推荐的js系列书的阶段，觉得得先把基础理清楚，现在总算是真正体会到，纸上得来终觉浅，绝知此事要躬行。今天终于沉下心来，实实在在的写几行代码，独立做了几个练习。如果说现在还写这么基础的东西，也不怕大家笑话，要认清自己究竟几斤几两，慢慢查缺补漏。不正确认识自己，就不会有长足的进步。把自己今天练习过程中遇">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"hide","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/03/01/action/"/>
+
+
+
+
+
+  <title> 纸上得来终觉浅 | YAXIN </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">YAXIN</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal true" itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/01/action/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="YAXIN LI">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YAXIN">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                纸上得来终觉浅
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-01T23:08:54+08:00">
+                2017-03-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/03/01/action/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/01/action/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+          <span id="busuanzi_container_page_pv">   |  <span id="busuanzi_value_page_pv"></span> 人阅读</span>
+          
+
+
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Never-too-late"><a href="#Never-too-late" class="headerlink" title="Never too late"></a>Never too late</h1><p>一直都觉得自己的js基础很弱，好像只会一些HTML+CSS，一直在看大神推荐的js系列书的阶段，觉得得先把基础理清楚，现在总算是真正体会到，纸上得来终觉浅，绝知此事要躬行。今天终于沉下心来，实实在在的写几行代码，独立做了几个练习。如果说现在还写这么基础的东西，也不怕大家笑话，要认清自己究竟几斤几两，慢慢查缺补漏。不正确认识自己，就不会有长足的进步。把自己今天练习过程中遇到的磕磕绊绊，查完资料之后解决了的问题一一记录下来。重复是记忆的根本。练一遍，记一遍，没事再翻翻自己的博客，估计就不会忘了吧。</p>
+<p>练习的题目来自百度IFE（即百度前端技术学院）,这种模式很好，让读者自己去找资料学习，然后完成布置的任务，更新到自己的GitHub上。我可是从零基础JavaScript编码练习开始做的呐，竟发现有些东西还不知道怎么实现。不过好在独立完成了零基础任务 一 、二、三。</p>
+<h1 id="练习过程中加深理解的地方"><a href="#练习过程中加深理解的地方" class="headerlink" title="练习过程中加深理解的地方"></a>练习过程中加深理解的地方</h1><h2 id="尽量实现js与html代码的分离，添加监听事件。"><a href="#尽量实现js与html代码的分离，添加监听事件。" class="headerlink" title="尽量实现js与html代码的分离，添加监听事件。"></a>尽量实现js与html代码的分离，添加监听事件。</h2><p>为了更好的区分结构层（HTML）、表示层（CSS）、行为层（JS），要尽量避免在HTML文件中出现css和js代码，在做任务一的时候，还没有太意识到这一点，于是给button 添加了 onclick的事件。如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;button id=<span class="string">"btn"</span> onclick=<span class="string">"display()"</span> &gt;确认填写&lt;<span class="regexp">/button&gt;</span></div></pre></td></tr></table></figure>
+<p>其实可以去掉onclick事件，给id为button的元素添加一个监听事件，即</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> btn = <span class="built_in">document</span>.getElementById(<span class="string">'btn'</span>);</div><div class="line">btn.addEventListener(<span class="string">'click'</span>, display, <span class="literal">false</span>);</div></pre></td></tr></table></figure>
+<p>下面来重温一下 addEventListener的用法：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">element.addEventListener(<span class="string">'event'</span>, <span class="function"><span class="keyword">function</span>, <span class="title">useCapture</span>)</span></div></pre></td></tr></table></figure>
+<p>event: 必须，指定事件名，通常有：click, load, dbclick,mouseover,mouseout等。</p>
+<p>function: 必须，指定事件触发试触发的函数。</p>
+<p>useCapture: 可选。布尔值，指定事件是否在捕获或者冒泡阶段执行。默认为false，时间句柄在冒泡阶段执行。</p>
+<h2 id="字符串截取方法不熟悉"><a href="#字符串截取方法不熟悉" class="headerlink" title="字符串截取方法不熟悉"></a>字符串截取方法不熟悉</h2><p>当想从“北京空气质量”几个字中提取北京两个字时，不知道该怎么截取前两个字。于是搜索了字符串截取常用方法。</p>
+<p>（1）substring()</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">stringObject.substring(start,end)</div></pre></td></tr></table></figure>
+<p>start: 截取的开始位置</p>
+<p>end: 截取的结束位置</p>
+<p>该方法将返回一个新字符串，其内容是从start处到end-1处的所有字符。若省略end，则截取到最后一位。</p>
+<p>（2）slice()</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">stringObject.slice(start,end)</div></pre></td></tr></table></figure>
+<p>slice()方法与substring()方法非常类似，它传入的两个参数也分别对应着开始位置和结束位置。而区别在于，slice()中的参数可以为负值，如果参数是负数，则该参数规定的是从字符串的尾部开始算起的位置。也就是说，-1 指字符串的最后一个字符。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">'abcdefg'</span>;</div><div class="line"><span class="built_in">console</span>.log(str.slice(<span class="number">1</span>, <span class="number">4</span>));    <span class="comment">//返回bcd</span></div><div class="line"><span class="built_in">console</span>.log(str.slice(<span class="number">-3</span>, <span class="number">-1</span>));    <span class="comment">//返回ef</span></div><div class="line"><span class="built_in">console</span>.log(str.slice(<span class="number">1</span>, <span class="number">-1</span>));    <span class="comment">//返回bcdef</span></div><div class="line"><span class="built_in">console</span>.log(str.slice(<span class="number">-1</span>, <span class="number">-3</span>));    <span class="comment">//返回空字符串，若传入的参数有问题，则返回空</span></div></pre></td></tr></table></figure>
+<p>(3) substr()</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">stringObject.substr(start,length)</div></pre></td></tr></table></figure>
+<p>substr()方法可在字符串中抽取从start下标开始的指定数目的字符。其返回值为一个字符串，包含从 stringObject的start（包括start所指的字符）处开始的length个字符。如果没有指定 length，那么返回的字符串包含从start到stringObject的结尾的字符。另外如果start为负数，则表示从字符串尾部开始算起。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">'abcdefg'</span>;</div><div class="line"><span class="built_in">console</span>.log(str.substr(<span class="number">1</span>, <span class="number">3</span>))    <span class="comment">//返回bcd</span></div><div class="line"><span class="built_in">console</span>.log(str.substr(<span class="number">2</span>))    <span class="comment">//返回cdefg</span></div><div class="line"><span class="built_in">console</span>.log(str.substr(<span class="number">-2</span>, <span class="number">4</span>))    <span class="comment">//返回fg，目标长度较大的话，以实际截取的长度为准</span></div></pre></td></tr></table></figure>
+<h2 id="二维数组转置的方法"><a href="#二维数组转置的方法" class="headerlink" title="二维数组转置的方法"></a>二维数组转置的方法</h2><p>再做练习的过程中，得到了一个2<em>7的二维数组，但是我想要一个7</em>2的二维数组，于是第一时间想到了“转置”这个词，看来我好像还是有那么点儿数学基础的，不然都不知道搜什么关键词不是。哈哈。下面便是我查到办法后的代码实现：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">predata = [city,quality];<span class="comment">//保存了城市和城市空气质量的2*7的数组</span></div><div class="line">  <span class="comment">//获取predata数组的长度, 然后将predata转置为符合要求的data</span></div><div class="line">  <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i&lt;predata[<span class="number">0</span>].length;i++)&#123;</div><div class="line">    data[i] = [];</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>;i&lt;predata.length;i++)&#123;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> j = <span class="number">0</span>;j&lt;predata[i].length;j++)&#123;</div><div class="line">      data[j][i] = predata[i][j];<span class="comment">//data便是转置后的数组</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+<h2 id="DOM操作，把得到的数据以li标签的形式展示出来"><a href="#DOM操作，把得到的数据以li标签的形式展示出来" class="headerlink" title="DOM操作，把得到的数据以li标签的形式展示出来"></a>DOM操作，把得到的数据以li标签的形式展示出来</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 得到所有的城市空气质量数据</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getaqi</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="keyword">var</span> ul = <span class="built_in">document</span>.getElementById(<span class="string">'all-list'</span>);</div><div class="line">  <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>; i&lt;aqiData.length; i++)&#123;</div><div class="line">    <span class="keyword">var</span> li = <span class="built_in">document</span>.createElement(<span class="string">'li'</span>);</div><div class="line">    li.innerHTML = aqiData[i][<span class="number">0</span>]+<span class="string">"  "</span>+aqiData[i][<span class="number">1</span>];</div><div class="line">    ul.appendChild(li);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这里用到了几种DOM常用的操作方法。</p>
+<p>(1) 通过id获取元素的方法，document.getElementById();</p>
+<p>(2) 创造新的标签元素的方法，document.createElement();</p>
+<p>(3) 改变相应元素在网页上展示的内容，li.innerHTML;</p>
+<p>(4) 将新添加的元素集成到某元素上，ul.appendChild(li);</p>
+<h2 id="如何避免多次触发点击事件"><a href="#如何避免多次触发点击事件" class="headerlink" title="如何避免多次触发点击事件"></a>如何避免多次触发点击事件</h2><p>可以在函数中添加一个标志位，在函数被触发后，将标志位置为false，于是再点击，点击事件将不再执行。</p>
+<h1 id="善用搜索，重视基础"><a href="#善用搜索，重视基础" class="headerlink" title="善用搜索，重视基础"></a>善用搜索，重视基础</h1><p>自从用了VPN，搜索效率确实深感提高，搜索结果也是英文居多。知道了很多不错的问答网站，如：</p>
+<p>当然还有很多经常会用到的CSDN啦，W3C school啦，这里就不一一列举，总是什么不会，谷歌一下，惊喜不断。</p>
+<p>路漫漫其修远兮，吾将上下而求索。切忌好高骛远，一屋不扫，何以扫天下。一行代码不写，何来万行代码。</p>
+<p>上次好友建议，以后每篇博文都以一首诗来结尾吧，今天就用获得诺贝尔奖的Bob Dylan(鲍勃 迪伦)的如诗如歌的《Blowing In the Wind》来结束此篇吧。</p>
+<blockquote>
+<p>How many roads must a man walk down<br>一个男人要走多远的路<br>Before they call him a man<br>才能被称为男人<br>How many seas must a white dove sail<br>一只白鸽必须飞过多少海洋<br>Before she sleeps in the sand<br>才能在沙滩上安睡<br>How many times must the cannon balls fly<br>加农炮还得飞行多少次<br>Before they’re forever banned<br>才会被永远禁止<br>The answer, my friend, is blowing in the wind<br>答案，我的朋友，在风里飘着呢<br>The answer is blowing in the wind<br>答案就在风里飘着呢<br>How many years can a mountain exist<br>一座山要存在多久<br>Before it is washed to the sea<br>才会被冲进大海<br>How many years can some people exist<br>人要活多少年<br>Before they’re allowed to be free<br>才能获得自由<br>How many times can a man turn his head<br>一个人可以扭头多少次<br>And pretend that he just doesn’t see<br>假装他什么都没看见<br>The answer, my friend, is blowing in the wind<br>答案，我的朋友，在风里飘着呢<br>The answer is blowing in the wind<br>答案就在风里飘着呢<br>How many times must a man look up<br>一个人得遥望多少次<br>Before he can see the sky<br>才能望的见天空<br>How many ears must one man have<br>一个人得有多少耳朵<br>Before he can hear people cry<br>才能听见人们的哭泣<br>How many deaths will it take<br>还要有多少人死<br>‘Till he knows that too many people have died<br>他才知道已有太多人死去<br>The answer, my friend, is blowing in the wind<br>答案，我的朋友，在风里飘着呢<br>The answer is blowing in the wind<br>答案就在风里飘着呢</p>
+</blockquote>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/coding/" rel="tag"># coding</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/02/26/MARK/" rel="next" title="博客终建成">
+                <i class="fa fa-chevron-left"></i> 博客终建成
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/03/01/action/"
+           data-title="纸上得来终觉浅" data-url="http://yoursite.com/2017/03/01/action/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="YAXIN LI" />
+          <p class="site-author-name" itemprop="name">YAXIN LI</p>
+           
+              <p class="site-description motion-element" itemprop="description">不为无益之事，何以遣有涯之生？</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Never-too-late"><span class="nav-number">1.</span> <span class="nav-text">Never too late</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#练习过程中加深理解的地方"><span class="nav-number">2.</span> <span class="nav-text">练习过程中加深理解的地方</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#尽量实现js与html代码的分离，添加监听事件。"><span class="nav-number">2.1.</span> <span class="nav-text">尽量实现js与html代码的分离，添加监听事件。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串截取方法不熟悉"><span class="nav-number">2.2.</span> <span class="nav-text">字符串截取方法不熟悉</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二维数组转置的方法"><span class="nav-number">2.3.</span> <span class="nav-text">二维数组转置的方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DOM操作，把得到的数据以li标签的形式展示出来"><span class="nav-number">2.4.</span> <span class="nav-text">DOM操作，把得到的数据以li标签的形式展示出来</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何避免多次触发点击事件"><span class="nav-number">2.5.</span> <span class="nav-text">如何避免多次触发点击事件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#善用搜索，重视基础"><span class="nav-number">3.</span> <span class="nav-text">善用搜索，重视基础</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-YAXIN"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">YAXIN LI</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"yaxinview"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+</body>
+</html>
