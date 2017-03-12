@@ -94,8 +94,8 @@ overflow
 
 cl">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CSS之Position理解">
-<meta property="og:url" content="http://yoursite.com/2017/03/12/312/index.html">
+<meta property="og:title" content="CSS之布局理解">
+<meta property="og:url" content="http://yoursite.com/2017/03/12/display/index.html">
 <meta property="og:site_name" content="YAXIN">
 <meta property="og:description" content="CSS之Position理解关于css的定位，看倒是看了很多。但是一直都觉得听到浮动二字，就有点怕。归根结底还是因为理解不到位。这次借着练习的机会，重新梳理一下不同定位的知识点。
 清除浮动的几种方法：
@@ -103,9 +103,9 @@ overflow
 一种清除浮动的技巧是使用“overflow”属性。在具有浮动元素的父容器中设置“overflow”的属性值为“auto”或者”hidden”，这样父容器就会有一个高度存在。
 
 cl">
-<meta property="og:updated_time" content="2017-03-12T05:10:00.000Z">
+<meta property="og:updated_time" content="2017-03-12T08:18:21.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CSS之Position理解">
+<meta name="twitter:title" content="CSS之布局理解">
 <meta name="twitter:description" content="CSS之Position理解关于css的定位，看倒是看了很多。但是一直都觉得听到浮动二字，就有点怕。归根结底还是因为理解不到位。这次借着练习的机会，重新梳理一下不同定位的知识点。
 清除浮动的几种方法：
 overflow
@@ -139,13 +139,13 @@ cl">
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/03/12/312/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/03/12/display/"/>
 
 
 
 
 
-  <title> CSS之Position理解 | YAXIN </title>
+  <title> CSS之布局理解 | YAXIN </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -264,7 +264,7 @@ cl">
   
 
   <article class="post post-type-normal true" itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/12/312/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/12/display/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="YAXIN LI">
@@ -285,7 +285,7 @@ cl">
             
             
               
-                CSS之Position理解
+                CSS之布局理解
               
             
           </h1>
@@ -319,8 +319,8 @@ cl">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/03/12/312/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/12/312/" itemprop="commentCount"></span>
+                <a href="/2017/03/12/display/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/12/display/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -375,12 +375,59 @@ cl">
 <h3 id="z-index"><a href="#z-index" class="headerlink" title="z-index"></a>z-index</h3><p>通常都认为Web页面是二维页面，显示的元素都在X轴和Y轴上。当你的元素有定位时，他们有时候会放置在另一个元素的顶部。要改变这些元素是一个 <a href="http://www.impressivewebs.com/a-detailed-look-at-the-z-index-css-property/" target="_blank" rel="external">怎么样的层叠顺序</a>，要知道z轴，z轴是用“z-index”属性来控制的。</p>
 <p>一般来说，在DOM中，元素出现的时候就放置在z轴上。在Dom中，元素在顶部的要低于底部的。改变这种层叠顺序可以直接使用“z-index”来控制。元素的“z-index”值越高将会出现在越上面，不管元素在Dom哪个位置上。</p>
 <p>给元素设置“z-index”属性，首先要在这个元素上设置了“position”属性值为“relatvie”、“absolute”或者“fixed”之一。同样的，你要使用盒子位移属性，你也要先确认元素设置了“positions”属性值为“relative”、“absolute”或者“fixed”之一。</p>
+<h1 id="CSS之Flex布局理解"><a href="#CSS之Flex布局理解" class="headerlink" title="CSS之Flex布局理解"></a>CSS之Flex布局理解</h1><h2 id="Flex布局是什么？"><a href="#Flex布局是什么？" class="headerlink" title="Flex布局是什么？"></a>Flex布局是什么？</h2><p>2009年，W3C提出了一种新的方案——Flex布局。可以简便、完整、响应式地实现各种页面布局。可以很好地实现特殊的布局，例如垂直居中。</p>
+<p>Flex是Flexible Box的缩写，意为“弹性布局”，用来为盒装模型提供最大的灵活性。</p>
+<p>任何属性都可以指定为Flex布局。块级元素：display: flex; 行内元素：display:inline-flex; webkit内核的浏览器必须加上-webkit,如下：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.container</span> &#123;</div><div class="line">  <span class="attribute">display</span>: -webkit-flex; <span class="comment">/* Safari */</span></div><div class="line">  <span class="attribute">display</span>: flex;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>设置flex布局之后，子元素的float、clear、vertical-align属性将失效。</p>
+<h2 id="Flex容器的6个属性"><a href="#Flex容器的6个属性" class="headerlink" title="Flex容器的6个属性"></a>Flex容器的6个属性</h2><h3 id="flex-direction"><a href="#flex-direction" class="headerlink" title="flex-direction"></a>flex-direction</h3><p>决定主轴的方向（项目的排列方向），可取如下四个值：</p>
+<p>row：默认值，主轴为水平方向，起点在左端。</p>
+<p>row-reverse：主轴为水平方向，起点在右端。</p>
+<p>column：主轴为垂直方向，起点为上沿。</p>
+<p>column-reverse：主轴为垂直方向，起点为下沿。</p>
+<h3 id="flex-wrap"><a href="#flex-wrap" class="headerlink" title="flex-wrap"></a>flex-wrap</h3><p>默认情况下，项目都排在一条线上，flex-wrap属性，定义如果一条轴线拍不下，如何换行。</p>
+<p>nowrap: 不换行。</p>
+<p>wrap：换行，第一行在上方。</p>
+<p>wrap-reverse：换行。第一行在下方。</p>
+<h3 id="flex-flow"><a href="#flex-flow" class="headerlink" title="flex-flow"></a>flex-flow</h3><p>是flex-direction和flex-wrap的简写。默认值为：row npwrap</p>
+<h3 id="justify-content"><a href="#justify-content" class="headerlink" title="justify-content"></a>justify-content</h3><p>定义了主轴上的对齐方式</p>
+<ul>
+<li><code>flex-start</code>（默认值）：左对齐</li>
+<li><code>flex-end</code>：右对齐</li>
+<li><code>center</code>： 居中</li>
+<li><code>space-between</code>：两端对齐，项目之间的间隔都相等。</li>
+<li><code>space-around</code>：每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍。</li>
+</ul>
+<h3 id="align-items"><a href="#align-items" class="headerlink" title="align-items"></a>align-items</h3><p>定义交叉轴上的对齐方式</p>
+<ul>
+<li><code>flex-start</code>：交叉轴的起点对齐。</li>
+<li><code>flex-end</code>：交叉轴的终点对齐。</li>
+<li><code>center</code>：交叉轴的中点对齐。</li>
+<li><code>baseline</code>: 项目的第一行文字的基线对齐。</li>
+<li><code>stretch</code>（默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度。</li>
+</ul>
+<h3 id="align-content"><a href="#align-content" class="headerlink" title="align-content"></a>align-content</h3><p>定义多根轴线的对其方式。如果只有一条轴线，该属性不起作用。</p>
+<ul>
+<li><code>flex-start</code>：与交叉轴的起点对齐。</li>
+<li><code>flex-end</code>：与交叉轴的终点对齐。</li>
+<li><code>center</code>：与交叉轴的中点对齐。</li>
+<li><code>space-between</code>：与交叉轴两端对齐，轴线之间的间隔平均分布。</li>
+<li><code>space-around</code>：每根轴线两侧的间隔都相等。所以，轴线之间的间隔比轴线与边框的间隔大一倍。</li>
+<li><code>stretch</code>（默认值）：轴线占满整个交叉轴。</li>
+</ul>
 <p>参考链接：</p>
-<p>HTML和CSS高级指南之二——定位理解：</p>
+<ol>
+<li>HTML和CSS高级指南之二——定位理解：</li>
+</ol>
 <p>作者：<a href="http://shayhowe.com/" target="_blank" rel="external">Shay Howe</a></p>
 <p>译者：<a href="http://www.w3cplus.com/" target="_blank" rel="external">大漠</a></p>
 <p><a href="http://learn.shayhowe.com/advanced-html-css/detailed-css-positioning/" target="_blank" rel="external">http://learn.shayhowe.com/advanced-html-css/detailed-css-positioning/</a></p>
-<h2 id="读诗时间"><a href="#读诗时间" class="headerlink" title="读诗时间"></a>读诗时间</h2><blockquote>
+<ol>
+<li><p>Flex 布局教程：语法篇</p>
+<p><a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html" target="_blank" rel="external">http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html</a></p>
+</li>
+</ol>
+<h1 id="读诗时间"><a href="#读诗时间" class="headerlink" title="读诗时间"></a>读诗时间</h1><blockquote>
 <p>《情书》沈从文</p>
 <p>一个白日带走了一点青春<br>日子虽不能毁坏我印象里你所给我的光明<br>却慢慢的使我不同了<br>一个女子在诗人的诗中<br>永远不会老去<br>但诗人他自己却老去了<br>我想到这些<br>我十分犹豫了</p>
 <p>生命是太脆薄的一种东西<br>并不比一株花更经得住年月风雨<br>用对自然倾心的眼<br>反观人生<br>使我不能不觉得热情的可珍<br>而看重人与人凑巧的藤葛<br>在同一人事上<br>第二次的凑巧是不会有的 </p>
@@ -456,8 +503,8 @@ cl">
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/03/12/312/"
-           data-title="CSS之Position理解" data-url="http://yoursite.com/2017/03/12/312/">
+      <div class="ds-thread" data-thread-key="2017/03/12/display/"
+           data-title="CSS之布局理解" data-url="http://yoursite.com/2017/03/12/display/">
       </div>
     
   </div>
@@ -552,7 +599,7 @@ cl">
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS之Position理解"><span class="nav-number">1.</span> <span class="nav-text">CSS之Position理解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#清除浮动的几种方法："><span class="nav-number">1.1.</span> <span class="nav-text">清除浮动的几种方法：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定位属性"><span class="nav-number">1.2.</span> <span class="nav-text">定位属性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#static"><span class="nav-number">1.2.1.</span> <span class="nav-text">static</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#relative"><span class="nav-number">1.2.2.</span> <span class="nav-text">relative</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#盒子位移属性是如何工作？"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">盒子位移属性是如何工作？</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#absolute"><span class="nav-number">1.2.3.</span> <span class="nav-text">absolute</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#fixed"><span class="nav-number">1.2.4.</span> <span class="nav-text">fixed</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#z-index"><span class="nav-number">1.2.5.</span> <span class="nav-text">z-index</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#读诗时间"><span class="nav-number">1.3.</span> <span class="nav-text">读诗时间</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS之Position理解"><span class="nav-number">1.</span> <span class="nav-text">CSS之Position理解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#清除浮动的几种方法："><span class="nav-number">1.1.</span> <span class="nav-text">清除浮动的几种方法：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定位属性"><span class="nav-number">1.2.</span> <span class="nav-text">定位属性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#static"><span class="nav-number">1.2.1.</span> <span class="nav-text">static</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#relative"><span class="nav-number">1.2.2.</span> <span class="nav-text">relative</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#盒子位移属性是如何工作？"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">盒子位移属性是如何工作？</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#absolute"><span class="nav-number">1.2.3.</span> <span class="nav-text">absolute</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#fixed"><span class="nav-number">1.2.4.</span> <span class="nav-text">fixed</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#z-index"><span class="nav-number">1.2.5.</span> <span class="nav-text">z-index</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS之Flex布局理解"><span class="nav-number">2.</span> <span class="nav-text">CSS之Flex布局理解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Flex布局是什么？"><span class="nav-number">2.1.</span> <span class="nav-text">Flex布局是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Flex容器的6个属性"><span class="nav-number">2.2.</span> <span class="nav-text">Flex容器的6个属性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#flex-direction"><span class="nav-number">2.2.1.</span> <span class="nav-text">flex-direction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#flex-wrap"><span class="nav-number">2.2.2.</span> <span class="nav-text">flex-wrap</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#flex-flow"><span class="nav-number">2.2.3.</span> <span class="nav-text">flex-flow</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#justify-content"><span class="nav-number">2.2.4.</span> <span class="nav-text">justify-content</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#align-items"><span class="nav-number">2.2.5.</span> <span class="nav-text">align-items</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#align-content"><span class="nav-number">2.2.6.</span> <span class="nav-text">align-content</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#读诗时间"><span class="nav-number">3.</span> <span class="nav-text">读诗时间</span></a></li></ol></div>
             
 
           </div>
