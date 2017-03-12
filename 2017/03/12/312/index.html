@@ -1,0 +1,732 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="coding," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="CSS之Position理解关于css的定位，看倒是看了很多。但是一直都觉得听到浮动二字，就有点怕。归根结底还是因为理解不到位。这次借着练习的机会，重新梳理一下不同定位的知识点。
+清除浮动的几种方法：
+overflow
+一种清除浮动的技巧是使用“overflow”属性。在具有浮动元素的父容器中设置“overflow”的属性值为“auto”或者”hidden”，这样父容器就会有一个高度存在。
+
+cl">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS之Position理解">
+<meta property="og:url" content="http://yoursite.com/2017/03/12/312/index.html">
+<meta property="og:site_name" content="YAXIN">
+<meta property="og:description" content="CSS之Position理解关于css的定位，看倒是看了很多。但是一直都觉得听到浮动二字，就有点怕。归根结底还是因为理解不到位。这次借着练习的机会，重新梳理一下不同定位的知识点。
+清除浮动的几种方法：
+overflow
+一种清除浮动的技巧是使用“overflow”属性。在具有浮动元素的父容器中设置“overflow”的属性值为“auto”或者”hidden”，这样父容器就会有一个高度存在。
+
+cl">
+<meta property="og:updated_time" content="2017-03-12T05:10:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSS之Position理解">
+<meta name="twitter:description" content="CSS之Position理解关于css的定位，看倒是看了很多。但是一直都觉得听到浮动二字，就有点怕。归根结底还是因为理解不到位。这次借着练习的机会，重新梳理一下不同定位的知识点。
+清除浮动的几种方法：
+overflow
+一种清除浮动的技巧是使用“overflow”属性。在具有浮动元素的父容器中设置“overflow”的属性值为“auto”或者”hidden”，这样父容器就会有一个高度存在。
+
+cl">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"hide","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/03/12/312/"/>
+
+
+
+
+
+  <title> CSS之Position理解 | YAXIN </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">YAXIN</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal true" itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/12/312/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="YAXIN LI">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YAXIN">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                CSS之Position理解
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-12T00:47:55+08:00">
+                2017-03-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/03/12/312/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/12/312/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+          <span id="busuanzi_container_page_pv">   |  <span id="busuanzi_value_page_pv"></span> 人阅读</span>
+          
+
+
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="CSS之Position理解"><a href="#CSS之Position理解" class="headerlink" title="CSS之Position理解"></a>CSS之Position理解</h1><p>关于css的定位，看倒是看了很多。但是一直都觉得听到浮动二字，就有点怕。归根结底还是因为理解不到位。这次借着练习的机会，重新梳理一下不同定位的知识点。</p>
+<h2 id="清除浮动的几种方法："><a href="#清除浮动的几种方法：" class="headerlink" title="清除浮动的几种方法："></a>清除浮动的几种方法：</h2><ol>
+<li><p>overflow</p>
+<p>一种清除浮动的技巧是使用“overflow”属性。在具有浮动元素的父容器中设置“overflow”的属性值为“auto”或者”hidden”，这样父容器就会有一个高度存在。</p>
+</li>
+<li><p>clearfix （定义一个专门清除浮动的类）</p>
+<p>“clearfix”技巧是基于在父元素上使用“:before”和“:after”两个伪类。使用这些伪类，我们可以在浮动元素的父容器前面和后面创建隐藏元素。“:before”伪类是用来防止子元素顶部的外边距塌陷，使用“display: table”创建一个匿名的“table-cell”元素。这也确保在IE6和IE7下具有一致性。“:after”伪类是用来防止子元素的底部的外边距塌陷，以及用来清除元素的浮动。</p>
+<p>在IE6和7的浏览器中，加上“*zoom”属性来触发父元素的<a href="http://www.satzansatz.de/cssd/onhavinglayout.html" target="_blank" rel="external">hasLayout</a>的机制。决定了元素怎样渲染内容，以及元素与元素之间的相互影响。</p>
+<p>可以创建一个清除浮动的类 group。加在需要清除浮动的子元素上面。如下代码：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">.group:before,</div><div class="line">.group:after &#123;</div><div class="line">  content: "";</div><div class="line">  display: table;</div><div class="line">&#125; </div><div class="line">.group:after &#123;</div><div class="line">  clear: both;</div><div class="line">&#125;</div><div class="line">.group &#123;</div><div class="line">  *zoom: 1;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="定位属性"><a href="#定位属性" class="headerlink" title="定位属性"></a>定位属性</h2><p>position有5个不同的属性。分别是：static，relative，absolute，fixed，z-index</p>
+<h3 id="static"><a href="#static" class="headerlink" title="static"></a>static</h3><p>position的默认属性。如果没有设置浮动，那么默认每个盒子都在相邻盒子的顶部。</p>
+<h3 id="relative"><a href="#relative" class="headerlink" title="relative"></a>relative</h3><p>relative和static的属性值很相似，主要区别是relative可以给元素设置offset（位移）top、right、left、bottom属性。这些offset可以精确的给元素定位。</p>
+<blockquote>
+<h4 id="盒子位移属性是如何工作？"><a href="#盒子位移属性是如何工作？" class="headerlink" title="盒子位移属性是如何工作？"></a>盒子位移属性是如何工作？</h4><p>盒子的位移属性有四个“top、right、bottom和left”，用来指定元素的定位位置和方向。这些属性只能在元素的“position”属性设置了“relative、absolute和fixed”属性值，才生效。</p>
+<p>对于相对定位元素，这些属性的设置让元素从默认位置移动。例如，top设置一个值“20px”在一个相对定位的元素上，这个元素会在原来位置向下移动“20px”。反之，“top”设置一个“-20px”，这个元素会在原来的位置向上移动“20px”。</p>
+<p>对于绝对定位和固定定位，这些属性指定了元素与父元素边缘之间的距离，例如，绝对定位的元素设置一个“top”值为“20px”，将使绝对定位元素相对于其设置了相对定位的祖先元素顶部边缘向下移动“20px”，反之，如果设置一个“top”值为“20px”，将使绝对定位元素相对于其设置了相对定位的祖先元素顶部边缘向上移动“20px”。（绝对定位的参考点是其祖先元素设置了“relative”或者“absolute”值）。</p>
+</blockquote>
+<h3 id="absolute"><a href="#absolute" class="headerlink" title="absolute"></a>absolute</h3><p>绝对定位元素也具有盒子位移属性，然而，绝对定位元素会脱离文档流。绝对定位元素直接从文档流中移出，绝对定位元素的位置直接和父容器是否设置了相对定位（绝对定位）有直接关系。绝对定位元素需要至少一个祖先元素设置了相对定位（绝对定位），不然元素定位会相对于页面的主体进行定位。</p>
+<h3 id="fixed"><a href="#fixed" class="headerlink" title="fixed"></a>fixed</h3><p>固定定位和绝对定位很类似，但是他定位是相对于浏览器窗口，并且不会随滚动条进行滚动。也就是说，不管用户停留在页面那个地方，固定定位的元素将始终停留在页面的一个地方。“position”属性值中，仅有“fixed”属性值不能在IE6浏览器下运行，如果你想在IE6正常使用固定定位，那么你就需要为他写一些Hacks。</p>
+<h3 id="z-index"><a href="#z-index" class="headerlink" title="z-index"></a>z-index</h3><p>通常都认为Web页面是二维页面，显示的元素都在X轴和Y轴上。当你的元素有定位时，他们有时候会放置在另一个元素的顶部。要改变这些元素是一个 <a href="http://www.impressivewebs.com/a-detailed-look-at-the-z-index-css-property/" target="_blank" rel="external">怎么样的层叠顺序</a>，要知道z轴，z轴是用“z-index”属性来控制的。</p>
+<p>一般来说，在DOM中，元素出现的时候就放置在z轴上。在Dom中，元素在顶部的要低于底部的。改变这种层叠顺序可以直接使用“z-index”来控制。元素的“z-index”值越高将会出现在越上面，不管元素在Dom哪个位置上。</p>
+<p>给元素设置“z-index”属性，首先要在这个元素上设置了“position”属性值为“relatvie”、“absolute”或者“fixed”之一。同样的，你要使用盒子位移属性，你也要先确认元素设置了“positions”属性值为“relative”、“absolute”或者“fixed”之一。</p>
+<p>参考链接：</p>
+<p>HTML和CSS高级指南之二——定位理解：</p>
+<p>作者：<a href="http://shayhowe.com/" target="_blank" rel="external">Shay Howe</a></p>
+<p>译者：<a href="http://www.w3cplus.com/" target="_blank" rel="external">大漠</a></p>
+<p><a href="http://learn.shayhowe.com/advanced-html-css/detailed-css-positioning/" target="_blank" rel="external">http://learn.shayhowe.com/advanced-html-css/detailed-css-positioning/</a></p>
+<h2 id="读诗时间"><a href="#读诗时间" class="headerlink" title="读诗时间"></a>读诗时间</h2><blockquote>
+<p>《情书》沈从文</p>
+<p>一个白日带走了一点青春<br>日子虽不能毁坏我印象里你所给我的光明<br>却慢慢的使我不同了<br>一个女子在诗人的诗中<br>永远不会老去<br>但诗人他自己却老去了<br>我想到这些<br>我十分犹豫了</p>
+<p>生命是太脆薄的一种东西<br>并不比一株花更经得住年月风雨<br>用对自然倾心的眼<br>反观人生<br>使我不能不觉得热情的可珍<br>而看重人与人凑巧的藤葛<br>在同一人事上<br>第二次的凑巧是不会有的 </p>
+<p>我生平只看过一回满月<br>我也安慰自己过<br>我说：<br>我行过许多地方的桥<br>看过许多次数的云<br>喝过许多种类的酒<br>却只爱过一个正当最好年龄的人</p>
+</blockquote>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/coding/" rel="tag"># coding</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/03/06/ife0306/" rel="next" title="重视基础，勤敲多练">
+                <i class="fa fa-chevron-left"></i> 重视基础，勤敲多练
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/03/12/312/"
+           data-title="CSS之Position理解" data-url="http://yoursite.com/2017/03/12/312/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="YAXIN LI" />
+          <p class="site-author-name" itemprop="name">YAXIN LI</p>
+           
+              <p class="site-description motion-element" itemprop="description">不为无益之事，何以遣有涯之生？</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS之Position理解"><span class="nav-number">1.</span> <span class="nav-text">CSS之Position理解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#清除浮动的几种方法："><span class="nav-number">1.1.</span> <span class="nav-text">清除浮动的几种方法：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定位属性"><span class="nav-number">1.2.</span> <span class="nav-text">定位属性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#static"><span class="nav-number">1.2.1.</span> <span class="nav-text">static</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#relative"><span class="nav-number">1.2.2.</span> <span class="nav-text">relative</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#盒子位移属性是如何工作？"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">盒子位移属性是如何工作？</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#absolute"><span class="nav-number">1.2.3.</span> <span class="nav-text">absolute</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#fixed"><span class="nav-number">1.2.4.</span> <span class="nav-text">fixed</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#z-index"><span class="nav-number">1.2.5.</span> <span class="nav-text">z-index</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#读诗时间"><span class="nav-number">1.3.</span> <span class="nav-text">读诗时间</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-YAXIN"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">YAXIN LI</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"yaxinview"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+</body>
+</html>
